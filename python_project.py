@@ -2,8 +2,7 @@ import random
 import math
 
 def play():
-    user = input(
-        "What's your choice? Choose 'r' for rock, 'p' for paper, 's' for scissors\n")
+    user = input("What's your choice? 'r' for rock, 'p' for paper, 's' for scissors\n")
     user = user.lower()
 
     computer = random.choice(['r', 'p', 's'])
@@ -34,22 +33,19 @@ def play_best_of(n):
         result, user, computer = play()
         # tie
         if result == 0:
-            print(
-                'It is a tie. You and the computer have both chosen {}. \n'.format(user))
+            print('It is a tie. You and the computer have both chosen {}. \n'.format(user))
         # you win
         elif result == 1:
             player_wins += 1
-            print('You chose {} and the computer chose {}. You won!\n'.format(
-                user, computer))
+            print('You chose {} and the computer chose {}. You won!\n'.format(user, computer))
         else:
             computer_wins += 1
-            print(
-                'You chose {} and the computer chose {}. You lost :(\n'.format(user, computer))
+            print('You chose {} and the computer chose {}. You lost :(\n'.format(user, computer))
 
     if player_wins > computer_wins:
-        print('You have won the best of {} games! What a champ :D'.format(n))
+        print('You have won the best of {} games... Well done !!!!!'.format(n))
     else:
         print('Unfortunately, the computer has won the best of {} games. Better luck next time!'.format(n))
 
 if __name__ == '__main__':
-    play_best_of(5)  
+    play_best_of(5) 
